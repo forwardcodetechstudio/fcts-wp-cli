@@ -1,0 +1,140 @@
+/*** Variable Setup ***/
+:root {
+	--c-white: #ffffff;
+	--c-black: #000000;
+}
+
+#login {
+	width: 400px;
+	background-color: #fff;
+	box-shadow: 20px 20px 30px 0 rgb(0 0 0 / 20%);
+	border: none;
+	border-radius: 40px;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+	padding: 0;
+}
+
+body.login {
+	background: var(--c-primary);
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: column;
+}
+
+body.login div#login form#loginform {
+	box-shadow: none;
+	border: none;
+	padding: 20px 20px;
+}
+
+body.login div#login {}
+
+body.login div#login h1 {}
+
+body.login div#login h1 a {
+	height: 65px;
+	width: 320px;
+	background-image: var(--c-login-screen-logo);
+	background-size: 320px 65px;
+	background-repeat: no-repeat;
+	margin-top: 30px;
+}
+
+body.login div#login form#loginform p.forgetmenot {
+	margin-top: 7px;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit {
+	background: var(--c-primary);
+	border-color: var(--c-primary);
+	border-radius: 0;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover {
+	background: var(--c-secondary);
+	border-color: var(--c-secondary);
+}
+
+body.login div#login form#loginform input#user_pass,
+body.login div#login form#loginform input#user_login {
+	border-radius: 0;
+}
+
+.wp-core-ui .button,
+.wp-core-ui .button-secondary {
+	color: var(--c-primary);
+}
+
+body.login div#login p#nav a {
+	color: var(--c-primary);
+	font-size: 14px;
+}
+
+body.login div#login p#backtoblog a {
+	color: var(--c-primary);
+	font-size: 14px;
+}
+
+.privacy-policy-link {
+	color: var(--c-primary);
+	font-size: 14px;
+}
+
+.privacy-policy-link:hover {
+	color: var(--c-secondary);
+}
+
+.language-switcher .button {
+	border-radius: 0;
+	border-color: #fff;
+	font-weight: 600;
+}
+
+.language-switcher .button:hover {
+	background: var(--c-secondary);
+	border-color: var(--c-secondary);
+	color: #fff;
+}
+
+.language-switcher #language-switcher-locales {
+	border-radius: 0;
+	border-color: #fff;
+}
+
+.language-switcher label {
+	color: #fff;
+}
+
+body.login div#login form#loginform p {}
+
+body.login div#login form#loginform p label {}
+
+body.login div#login form#loginform input {}
+
+body.login div#login form#loginform input#user_login {}
+
+body.login div#login form#loginform input#user_pass {}
+
+body.login div#login form#loginform p.forgetmenot input#rememberme {}
+
+body.login div#login form#loginform p.submit {}
+
+body.login div#login form#loginform p.submit input#wp-submit {}
+
+body.login div#login p#nav {
+	display: inline-block;
+	margin: 0;
+}
+
+body.login div#login p#backtoblog {
+	display: inline-block;
+	float: right;
+	margin: 0;
+}
