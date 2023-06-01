@@ -2,36 +2,30 @@
 
 if (!defined('_S_VERSION')) {
     // Replace the version number of the theme on each release.
-    $my_theme = wp_get_theme();
-    $liw_shop_version = esc_html($my_theme->get('Version'));
-    define('_S_VERSION', $liw_shop_version);
+    define('_S_VERSION', wp_get_theme()->get('Version'));
 }
 
 /**
- * Theme Directorys for CSS, JS, IMAGES
+ * Theme Directories for CSS, JS, IMAGES
  */
-
 if (!defined('THEME_NAME_DIR_PATH')) {
-    // Fetching the Directory Path for this theme.
     define('THEME_NAME_DIR_PATH', untrailingslashit(get_template_directory()));
 }
 
 if (!defined('THEME_NAME_DIR_URI')) {
-    // Fetching the directory Path URL for this theme.
     define('THEME_NAME_DIR_URI', untrailingslashit(get_template_directory_uri()));
 }
 
+$theme_name_assets_uri = untrailingslashit(THEME_NAME_DIR_URI) . '/assets';
+
 if (!defined('THEME_NAME_CSS_URI')) {
-    // Fetching The CSS Files URL for this theme.
-    define('THEME_NAME_CSS_URI', untrailingslashit(get_template_directory_uri()) . '/assets/css/');
+    define('THEME_NAME_CSS_URI', $theme_name_assets_uri . '/css/');
 }
 
 if (!defined('THEME_NAME_JS_URI')) {
-    // Fetching The JS Files URL for this theme.
-    define('THEME_NAME_JS_URI', untrailingslashit(get_template_directory_uri()) . '/assets/js/');
+    define('THEME_NAME_JS_URI', $theme_name_assets_uri . '/js/');
 }
 
 if (!defined('THEME_NAME_ICON_URI')) {
-    // Fetching The ICON Files URL for this them.
-    define('THEME_NAME_ICON_URI', untrailingslashit(get_template_directory_uri()) . '/assets/img/');
+    define('THEME_NAME_ICON_URI', $theme_name_assets_uri . '/img/');
 }

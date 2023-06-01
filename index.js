@@ -11,13 +11,12 @@ const os = require('os');
 const colorError = "\u001b[31m";
 const colorSuccess = "\u001b[32m";
 const colorInfo = "\u001b[34m";
-const downloadFileName = "wordpress_" + Date().toString();
+const downloadFileName = "wordpress_" + new Date().getTime();
 const boilerplatePath = __dirname + '/src/theme_starter_kit'
 
 const printError = (message) => console.error(colorError, message);
 const printSuccess = (message) => console.log(colorSuccess, message);
 const printInfo = (message) => console.info(colorInfo, message);
-
 
 var projectName, dir, themeDir;
 
@@ -25,21 +24,14 @@ const tempDir = os.tmpdir();
 
 const currentDirectory = process.cwd();
 
-
-
-
+// ====================================
 
 init();
 
 
-
-
 // Entry point of the tool
-async function init() {
+function init() {
     fetchVariables();
-
-
-
 }
 
 function fetchVariables() {

@@ -8,44 +8,44 @@
  */
 
 /**
- * This Theme Constants.
+ * Define constants used throughout the theme.
  */
 require get_template_directory() . '/inc/theme-name-constants.php';
 
 /**
- * This Theme Setup.
+ * Set up the theme by adding support for various features and setting default options.
  */
 require THEME_NAME_DIR_PATH . '/inc/theme-name-setup.php';
 
 /**
- * Enqueue scripts and styles.
+ * Register and enqueue stylesheets and scripts for the theme.
  */
 require THEME_NAME_DIR_PATH . '/inc/theme-name-scripts.php';
 
 /**
- * Functions which enhance the theme by hooking into WordPress.
+ * Functions that enhance the theme by hooking into WordPress
  */
 require THEME_NAME_DIR_PATH . '/inc/theme-name-template-functions.php';
 
 /**
- * Implement the Custom ACF functions.
+ * If the Advanced Custom Fields plugin is active, add custom functions for ACF fields.
  */
 if ( class_exists( 'ACF' ) ) {
     require THEME_NAME_DIR_PATH . '/inc/theme-name-acf-functions.php';
 }
 
 /**
- * Implement the Custom Image functions.
+ * Add custom functions to manage custom images used in the theme.
  */
 require THEME_NAME_DIR_PATH . '/inc/theme-name-custom-image.php';
 
 /**
- * Implement the Custom Login Screen functions.
+ * Add custom functions to modify the WordPress login screen.
  */
 require THEME_NAME_DIR_PATH . '/inc/theme-name-custom-login.php';
 
 /**
- * Load Jetpack compatibility file.
+ * If Jetpack is active, load the Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';

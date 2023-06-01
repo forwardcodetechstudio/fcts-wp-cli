@@ -9,7 +9,7 @@
  */
 
 // Fetching modules settings like ID, Padding, Background Color etc.
-list($customID, $customClass) = modules_settings();
+list($customID, $customClass) = get_modules_settings();
 
 ?>
 
