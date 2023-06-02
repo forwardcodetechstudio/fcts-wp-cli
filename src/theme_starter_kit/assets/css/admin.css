@@ -1,0 +1,27 @@
+.acf-fc-popup .preview {
+  position: absolute;
+  right: 100%;
+  margin-right: 0px;
+  top: 0;
+  background: #383c44;
+  min-height: 100%;
+  border-radius: 5px;
+  align-content: center;
+  display: grid;
+}
+
+.acf-fc-popup .preview .inner-preview {
+  padding: 10px;
+}
+
+.acf-fc-popup .preview img {
+  display: block;
+}
+
+/* acf-fc-layout-handle */
+
+.acf-fc-layout-handle {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px;
+}
