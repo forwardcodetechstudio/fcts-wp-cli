@@ -1,0 +1,828 @@
+{
+    "key": "group_674869efc7b8e",
+    "title": "Optionen System",
+    "fields": [
+        {
+            "key": "field_674869f0f0355",
+            "label": "System",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67486bc1695aa",
+            "label": "Emoji aus dem header entfernen",
+            "name": "sys_remove_emoji",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_67486c50695ab",
+            "label": "Login Shake entfernen",
+            "name": "sys_remove_login_shake",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Admin Login wackelt wenn etwas falsch war.",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_674884ff8d8de",
+            "label": "Script Version entfernen",
+            "name": "sys_remove_script_version",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Die an jedem CSS und JS angehängten Versionen entfernen",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_674885488d8df",
+            "label": "Headlinks entfernen",
+            "name": "sys_headlinks_entfernen",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Standardmäßig lädt WordPress mehrere Funktionen, Dienste und Skripte, die nicht zwingend erforderlich sind. Sie verlangsamen die Webseite und verschwenden Hosting-Ressourcen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_6748856a8d8e1",
+                    "label": "WP Generator",
+                    "name": "sys_remove_wp_generator",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Meta-Anzeige WP Generator",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "toggle",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "Ein",
+                    "ui_off_text": "Aus",
+                    "ui": 1
+                },
+                {
+                    "key": "field_674885ba8d8e2",
+                    "label": "Feed Links",
+                    "name": "sys_remove_feed_links",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Entfernt die WP Feedlinks",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "toggle",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "Ein",
+                    "ui_off_text": "Aus",
+                    "ui": 1
+                },
+                {
+                    "key": "field_674886168d8e3",
+                    "label": "Reduntante Shortlinks",
+                    "name": "sys_remove_redundant_shortlink",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Entfernen der Redundanten Shortlinks im Header",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "toggle",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "Ein",
+                    "ui_off_text": "Aus",
+                    "ui": 1
+                },
+                {
+                    "key": "field_674886748d8e4",
+                    "label": "XML-RPC deaktivieren",
+                    "name": "sys_remove_xmlrpc",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "XML-RPC in WordPress deaktivieren",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "toggle",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "Ein",
+                    "ui_off_text": "Aus",
+                    "ui": 1
+                },
+                {
+                    "key": "field_67488e037cc7a",
+                    "label": "wlwmanifest.xml entfernen",
+                    "name": "sys_remove_wlwmanifest",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Dient der Unterstützung von Windows Live Writer",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "toggle",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "Ein",
+                    "ui_off_text": "Aus",
+                    "ui": 1
+                },
+                {
+                    "key": "field_67488e9724494",
+                    "label": "Parent Post Link",
+                    "name": "sys_remove_parent_post_rel_link",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Relationalen Link zum übergeordneten Beitrag entfernen (Deprecated)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "toggle",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "Ein",
+                    "ui_off_text": "Aus",
+                    "ui": 1
+                },
+                {
+                    "key": "field_67488efba9c44",
+                    "label": "Link für nächsten und vorherigen Beitrag",
+                    "name": "sys_remove_adjacent_posts_rel_link",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Zeigt die relationalen Links für die Beiträge an, die an den aktuellen Beitrag angrenzen.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "toggle",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "Ein",
+                    "ui_off_text": "Aus",
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_67488fb570550",
+            "label": "WP Embeds entfernen",
+            "name": "sys_wp_embeds_entfernen",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_67488fe070551",
+                    "label": "Inhaltsfeed-Filter entfernen",
+                    "name": "sys_remove_filter_feed_content",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "toggle",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "Ein",
+                    "ui_off_text": "Aus",
+                    "ui": 1
+                },
+                {
+                    "key": "field_6748903e70552",
+                    "label": "Embed-Bibliotheken",
+                    "name": "sys_remove_maybe_load_embeds",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Laden von Embed-Bibliotheken abbrechen",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "toggle",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "Ein",
+                    "ui_off_text": "Aus",
+                    "ui": 1
+                },
+                {
+                    "key": "field_674890c670553",
+                    "label": "Embed-Auto Doscovery",
+                    "name": "sys_remove_embed_discover",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Automatische Einbettungen iFrames abbrechen",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "toggle",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui_on_text": "Ein",
+                    "ui_off_text": "Aus",
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_674886b68d8e5",
+            "label": "Kommentare deaktivieren",
+            "name": "sys_disable_comments",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_674886f78d8e7",
+            "label": "Gutenberg Block-Editor entfernen",
+            "name": "sys_remove_gutenberg",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ffd9938985",
+            "label": "Globaler WP Style",
+            "name": "sys_global_styles",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ffdc638986",
+            "label": "Globaler SVG Render Style",
+            "name": "sys_global_styles_render_svg_filters",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_6806265afef85",
+            "label": "Block User Access",
+            "name": "block_user_access",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_680626c8fef87",
+                    "label": "Block Access",
+                    "name": "block_access",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui_on_text": "Block",
+                    "ui_off_text": "UnBlock",
+                    "ui": 1
+                },
+                {
+                    "key": "field_680626defef88",
+                    "label": "Redirect Page link",
+                    "name": "redirect_page_link",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_677fe393bf67c",
+            "label": "Herzschlag",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_677fe3cae074c",
+            "label": "Heartbeat",
+            "name": "sys_heartbeat",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Herzschlag von WordPress anpassen. Interval von 15 bis 300 Sekunden einstellbar.",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677fe472c1927",
+            "label": "Heartbeat Interval",
+            "name": "sys_heartbeat_interval",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "smallfield",
+                "id": ""
+            },
+            "default_value": 60,
+            "min": 15,
+            "max": 300,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": 5,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_677ff190baa6d",
+            "label": "Dashboard",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_677ff1cfbaa6e",
+            "label": "WordPress Blog",
+            "name": "wpdash_dashboard_primary",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Widget ausschalten?",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ff2687ceda",
+            "label": "WordPress News and Events",
+            "name": "wpdash_dashboard_secondary",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Widget ausschalten?",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ff2ba642d2",
+            "label": "Aktivitäten",
+            "name": "wpdash_dashboard_activity",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Widget ausschalten?",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ff2f4642d3",
+            "label": "Schnellveröffentlichung",
+            "name": "wpdash_dashboard_quick_press",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Widget ausschalten?",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ff311642d4",
+            "label": "Eingehende Links",
+            "name": "wpdash_dashboard_incoming_links",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Widget ausschalten?",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ff335642d5",
+            "label": "Im Augenblick",
+            "name": "wpdash_dashboard_right_now",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Widget ausschalten?",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ff352642d6",
+            "label": "Neueste Plugins",
+            "name": "wpdash_dashboard_plugins",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Widget ausschalten?",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ff36d642d7",
+            "label": "Neueste Entwürfe",
+            "name": "wpdash_dashboard_recent_drafts",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Widget ausschalten?",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ff386642d8",
+            "label": "Neueste Kommentare",
+            "name": "wpdash_dashboard_recent_comments",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Widget ausschalten?",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ff39a642d9",
+            "label": "Rank Math",
+            "name": "wpdash_rank_math_dashboard_widget",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Widget ausschalten?",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ff3ba642da",
+            "label": "Website Gesundheit",
+            "name": "wpdash_dashboard_site_health",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Widget ausschalten?",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        },
+        {
+            "key": "field_677ff3da642db",
+            "label": "Willkommen Widget",
+            "name": "wpdash_wp_welcome_panel",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "toggle",
+                "id": ""
+            },
+            "message": "Widget ausschalten?",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Ein",
+            "ui_off_text": "Aus",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "performance"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1745233707
+}

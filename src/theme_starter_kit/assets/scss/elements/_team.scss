@@ -1,0 +1,41 @@
+.team {
+  &__box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    background-color: $color-white;
+    border-radius: 0;
+    img {
+      display: block;
+      border-radius: 0;
+    }
+
+    &__body {
+      padding: 30px;
+      @include down-sm {
+        padding: 20px;
+      }
+      p {
+        font-size: var(--fs-16);
+      }
+      h4 {
+        color: $color-dark-blue;
+        font-weight: 600;
+      }
+      .team__links {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 10px 14px;
+        img {
+          max-width: 24px;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

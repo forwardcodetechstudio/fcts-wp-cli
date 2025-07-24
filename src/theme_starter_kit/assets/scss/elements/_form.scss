@@ -1,0 +1,352 @@
+.contact-form-wrapper {
+  .nf-form-content {
+    max-width: 100%;
+  }
+  .nf-before-form-content {
+    margin-bottom: 12px;
+    color: $color-black;
+    font-size: var(--fs-18);
+    display: none;
+  }
+
+  //radio buttons start
+  .list-radio-wrap {
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 0 30px;
+
+      li {
+        width: auto !important;
+        color: $color-black;
+        font-size: var(--fs-18);
+        &::before {
+          content: unset;
+        }
+
+        label {
+          font-size: inherit !important;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  .list-checkbox-wrap {
+    ul {
+      li {
+        &::before {
+          content: unset;
+        }
+      }
+    }
+  }
+
+  .nf-form-content input[type="checkbox"].ninja-forms-field,
+  .nf-form-content input[type="radio"].ninja-forms-field {
+    visibility: hidden;
+    padding: 0;
+  }
+
+  .listradio-wrap .nf-field-element label:after {
+    width: 20px;
+    height: 20px;
+    border: 2px solid $color-dark-blue;
+    border-radius: 50%;
+    background: #fff;
+    bottom: auto;
+    top: 0;
+  }
+
+  .listradio-wrap .nf-field-element label.nf-checked-label:after {
+    border-color: $color-dark-blue;
+  }
+
+  .listradio-wrap .nf-field-element label.nf-checked-label:before {
+    width: 12px;
+    height: 12px;
+    background: $color-dark-blue;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    transform-origin: center;
+    border: 4px solid transparent;
+    bottom: auto;
+    top: 4px;
+  }
+  //radio buttons end
+
+  //overall start
+  #ninja_forms_required_items,
+  .nf-field-container {
+    margin-bottom: 20px;
+  }
+
+  .nf-form-content .listselect-wrap .nf-field-element div,
+  .nf-form-content input.ninja-forms-field,
+  .nf-form-content select.ninja-forms-field:not([multiple]) {
+    height: 50px;
+  }
+
+  .nf-form-content .list-select-wrap .nf-field-element > div:focus,
+  .nf-form-content input:not(.btn):focus,
+  .nf-form-content textarea:focus {
+    border: 2px solid $color-dark-blue;
+    color: $color-black;
+  }
+
+  .nf-form-content label {
+    font-size: var(--fs-18);
+    font-weight: 600;
+    padding-top: 1px;
+
+    a {
+      font-weight: bold;
+    }
+  }
+  //overall end
+
+  //checkbox start
+  .checkbox-wrap .nf-field-element label,
+  .checkbox-wrap .nf-field-label label,
+  .listcheckbox-wrap .nf-field-element label,
+  .listcheckbox-wrap .nf-field-label label {
+    cursor: pointer;
+  }
+  .checkbox-wrap .nf-field-element label:after,
+  .checkbox-wrap .nf-field-label label:after,
+  .listcheckbox-wrap .nf-field-element label:after,
+  .listcheckbox-wrap .nf-field-label label:after {
+    width: 21px;
+    height: 21px;
+    border: 2px solid $color-yellow;
+    margin: 0.125rem 0 0;
+    background: transparent;
+  }
+
+  .checkbox-wrap .nf-field-element label:after,
+  .checkbox-wrap .nf-field-label label:after,
+  .listcheckbox-wrap .nf-field-element label:after,
+  .listcheckbox-wrap .nf-field-label label:after {
+    color: $color-black;
+    background: transparent;
+  }
+  .checkbox-wrap .nf-field-element label.nf-checked-label:after,
+  .checkbox-wrap .nf-field-label label.nf-checked-label:after,
+  .listcheckbox-wrap .nf-field-element label.nf-checked-label:after,
+  .listcheckbox-wrap .nf-field-label label.nf-checked-label:after {
+    border-color: $color-yellow;
+  }
+
+  .checkbox-wrap .nf-field-element label:before,
+  .checkbox-wrap .nf-field-label label:before,
+  .listcheckbox-wrap .nf-field-element label:before,
+  .listcheckbox-wrap .nf-field-label label:before {
+    font-size: var(--fs-18);
+    background: transparent;
+  }
+  .checkbox-wrap .nf-field-element label.nf-checked-label:before,
+  .checkbox-wrap .nf-field-label label.nf-checked-label:before,
+  .listcheckbox-wrap .nf-field-element label.nf-checked-label:before,
+  .listcheckbox-wrap .nf-field-label label.nf-checked-label:before {
+    background: transparent;
+    color: $color-yellow;
+  }
+
+  .checkbox-container.label-right label {
+    margin: 0 0 0 42px !important;
+  }
+  .checkbox-container.label-right label:after {
+    left: -40px !important;
+  }
+  .checkbox-container.label-right label:before {
+    left: -38px !important;
+    top: 1px;
+  }
+  .checkbox-container.label-left label {
+    margin: 0 42px 0 0 !important;
+  }
+  .checkbox-container.label-left label:after {
+    right: -40px !important;
+  }
+  .checkbox-container.label-left label:before {
+    right: -36px !important;
+  }
+  .listcheckbox-container .nf-field-element label {
+    margin-left: 42px !important;
+  }
+  .listcheckbox-container .nf-field-element label:before {
+    left: -38px !important;
+  }
+  .listcheckbox-wrap .nf-field-element label:after {
+    left: -40px !important;
+  }
+  .listcheckbox-container .nf-field-element label:after,
+  .checkbox-container.label-right label:after {
+    top: -2px;
+  }
+  .listcheckbox-container .nf-field-element label:before {
+    top: 0;
+  }
+
+  .label-right .field-wrap,
+  .label-left .field-wrap {
+    flex-wrap: wrap;
+
+    .nf-field-description {
+      margin: 0 !important;
+    }
+  }
+  .field-wrap .nf-field-description {
+    color: $color-black;
+    font-size: var(--fs-18);
+    font-weight: 400;
+    padding-top: 10px;
+  }
+  .label-right .field-wrap .nf-field-description {
+    margin: 0 !important;
+  }
+  .label-left .field-wrap .nf-field-description {
+    margin: 0 !important;
+    padding-right: 40px;
+  }
+  //checkbox end
+
+  // input color & placeholder start
+  .nf-form-content .list-select-wrap .nf-field-element > div,
+  .nf-form-content input:not(.btn),
+  .nf-form-content textarea {
+    color: $color-black;
+    background: $color-white;
+    border-radius: 0;
+    border: 2px solid $color-dark-blue;
+    box-shadow: none;
+    transition: all 0.5s;
+    padding: 0.125em 1em;
+    font-size: var(--fs-18);
+    font-weight: 400;
+    line-height: 1.5;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .nf-form-content .list-select-wrap .nf-field-element > div,
+  .nf-form-content input:not(.btn),
+  .nf-form-content textarea {
+    background: $color-white;
+    border-radius: 0;
+  }
+
+  .nf-form-content textarea {
+    display: block;
+    width: 100%;
+    padding: 1em;
+  }
+
+  .nf-form-content input::placeholder,
+  .nf-form-content textarea::placeholder {
+    color: $color-black;
+    font-size: inherit !important;
+  }
+
+  .nf-form-content select.ninja-forms-field {
+    color: $color-black;
+    border: 2px solid $color-dark-blue;
+    padding: 0.125em 1em;
+    font-size: var(--fs-18);
+    font-weight: 400;
+  }
+
+  .nf-form-content .list-select-wrap > div div:after {
+    font-size: var(--fs-18);
+  }
+
+  .nf-form-content select.ninja-forms-field:active,
+  .nf-form-content select.ninja-forms-field:focus,
+  .nf-form-content .list-select-wrap .nf-field-element > div {
+    border-color: transparent !important;
+    border: 2px solid var(--color-winter-purple) !important;
+  }
+
+  .list-select-wrap div:after {
+    color: $color-black;
+  }
+
+  // input color & placeholder end
+
+  // button start
+  .submit-wrap {
+    .nf-field-element {
+      width: 100%;
+      @include down-md {
+        margin: auto;
+      }
+    }
+  }
+
+  .nf-form-content button,
+  .nf-form-content input.btn {
+    font-size: var(--fs-18);
+    line-height: 1.375;
+    padding: 9px 50px;
+    outline: none;
+    color: $color-dark-blue;
+    background-color: $color-yellow;
+    box-shadow: none;
+    user-select: auto;
+    height: auto;
+    transition: $ease300;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-dark-blue;
+    }
+  }
+  // button end
+
+  // textarea start
+  .textarea-wrap {
+    .nf-field-label {
+      width: 100%;
+    }
+
+    label {
+      width: 100%;
+    }
+  }
+  // textarea end
+
+  // error start
+  .nf-error-msg {
+    font-size: var(--fs-18);
+    line-height: 1;
+  }
+
+  .nf-error .nf-error-msg {
+    font-size: var(--fs-16);
+    line-height: 1;
+  }
+
+  .nf-error.field-wrap .nf-field-element:after {
+    display: none;
+  }
+
+  .nf-pass.field-wrap .nf-field-element:after {
+    display: none;
+  }
+  .nf-error.listimage-wrap .nf-field-element ul,
+  .nf-error .ninja-forms-field {
+    border-color: transparent;
+  }
+  .nf-pass .ninja-forms-field {
+    border-color: green;
+  }
+  label .nf-error-msg,
+  label .ninja-forms-req-symbol {
+    //color: $color-black;
+  }
+  // error end
+}
+
+// hubspot form
+.hs-form * {
+  all: unset;
+}

@@ -1,0 +1,143 @@
+.blogpost {
+  .breadcrumbs {
+    margin-bottom: 20px;
+  }
+
+  &__overview {
+    margin-bottom: 16px;
+  }
+
+  &__category {
+    display: inline-block;
+    background-color: $color-white;
+    padding: 4px 8px;
+  }
+
+  &__img {
+    margin-bottom: 24px;
+  }
+
+  &__info {
+    display: flex;
+    row-gap: 16px;
+
+    @include down-lg {
+      flex-direction: column;
+    }
+
+    @include up-lg {
+      justify-content: space-between;
+    }
+  }
+
+  &__about {
+    display: flex;
+    column-gap: 40px;
+    @include down-sm {
+      flex-direction: column;
+      column-gap: 20px;
+      justify-content: space-between;
+    }
+
+    br {
+      @include down-sm {
+        display: none;
+      }
+    }
+
+    span {
+      display: inline-block;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+  }
+
+  &__body {
+    figure {
+      margin-top: 48px;
+      margin-bottom: 48px;
+    }
+
+    figcaption {
+      display: block;
+      font-size: var(--fs-14);
+      text-align: left;
+      color: $color-dark-blue;
+      padding-top: 8px;
+    }
+
+    quote {
+      display: block;
+      font-style: italic;
+      font-size: var(--fs-18);
+      line-height: 1.7;
+      margin-bottom: 15px;
+      padding-left: 21px;
+      border-left: 1px solid $color-black;
+
+      @include up-lg {
+        margin-bottom: 18px;
+      }
+    }
+
+    p + h2 {
+      margin-top: 30px;
+    }
+  }
+
+  &__footer {
+    &__author {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      padding-top: 32px;
+      margin-top: 32px;
+      border-top: 1px solid $color-black;
+
+      @include up-lg {
+        padding-top: 48px;
+        margin-top: 48px;
+      }
+
+      img {
+        display: block;
+        border-radius: 0;
+        max-width: 56px;
+        border: 2px solid $color-dark-blue;
+        height: 56px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
+
+      h6 {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    &__top {
+      display: flex;
+      row-gap: 32px;
+
+      @include down-lg {
+        flex-direction: column;
+      }
+
+      @include up-lg {
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+  }
+
+  .tag-cloud {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    display: inline-block;
+    background-color: $color-white;
+    padding: 4px 8px;
+  }
+}

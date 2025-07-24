@@ -1,0 +1,59 @@
+.faq {
+  .selector-content {
+  }
+  .content-show-hide {
+    .item {
+      border-bottom: 1px solid $color-dark-blue;
+      &:first-child {
+        border-top: 1px solid $color-dark-blue;
+      }
+    }
+  }
+
+  .toggle {
+    font-size: var(--fs-20);
+    font-family: var(--font-main);
+    font-weight: 600;
+    color: $color-dark-blue;
+    line-height: 1.5;
+    padding: 20px 0 20px 40px;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 0;
+    hyphens: auto;
+    // @include down-sm {
+    //   padding: 20px 0 20px 30px;
+    // }
+
+    &._js-open {
+      &:after {
+        background-image: url("../img/icons/i-minus.svg");
+      }
+    }
+
+    &:after {
+      content: "";
+      width: 26px;
+      height: 26px;
+      position: absolute;
+      left: 0;
+      top: 40px;
+      margin-top: -18px;
+      background-image: url("../img/icons/i-plus.svg");
+      //background-size: contain;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      transition: $ease300;
+      @include down-lg {
+        width: 26px;
+        height: 26px;
+        top: 38px;
+      }
+    }
+  }
+
+  .inner {
+    display: none;
+    padding: 0px 0 20px 0;
+  }
+}

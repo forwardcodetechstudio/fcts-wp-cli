@@ -1,0 +1,35 @@
+.cta {
+  position: relative;
+  z-index: 0;
+  .bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  ._text {
+    padding: 32px;
+
+    @include up-lg {
+      padding: 75px 48px;
+    }
+  }
+
+  ._img {
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__box {
+    border: 1px solid var(--primary-color);
+  }
+}

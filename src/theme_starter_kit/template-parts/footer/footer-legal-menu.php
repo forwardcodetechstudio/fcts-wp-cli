@@ -5,17 +5,17 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Theme_Name
+ * @package DL_BOILERPLATE
  */
 
-if ( has_nav_menu( 'footer-legal-menu' ) ) {
-    wp_nav_menu( [
+if (has_nav_menu('footer-legal-menu')) {
+    wp_nav_menu([
         'theme_location' => 'footer-legal-menu',
-        'container'      => false,
-        'echo'           => true,
-        'menu_id'        => '',
-        'menu_class'     => false,
-        'items_wrap'     => '<ul>%3$s</ul>',
-        'depth'          => 1,
-    ] );
+        'container' => false,
+        'echo' => true,
+        'menu_id' => '',
+        'menu_class' => false,
+        'items_wrap' => '<ul>%3$s</ul>',
+        'depth' => 1,
+    ]);
 }

@@ -1,0 +1,44 @@
+.image-icon {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    background-position: bottom;
+    background-image: var(--deco-img);
+    background-repeat: no-repeat;
+    width: calc(((100% - var(--container)) / 2) + (var(--container) / 12) * 5);
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: contain;
+    pointer-events: none;
+  }
+  img {
+    border-radius: 0;
+  }
+  &__box {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    margin-bottom: 40px;
+    @include down-sm {
+      flex-direction: column;
+      gap: 20px;
+    }
+    ._img {
+      img {
+        display: block;
+        width: 70px;
+        border-radius: 0;
+      }
+    }
+
+    ._text {
+      h4 {
+        font-size: var(--fs-20);
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+    }
+  }
+}

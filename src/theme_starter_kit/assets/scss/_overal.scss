@@ -1,0 +1,86 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  position: relative;
+  overflow-x: hidden;
+
+  &._js-overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  font-size: inherit;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+.r-gap-20 {
+  row-gap: 20px;
+}
+.r-gap-40 {
+  row-gap: 40px;
+}
+.row {
+  @include up-xl {
+    --bs-gutter-x: 2rem;
+    // margin-right: calc(var(--bs-gutter-x) * -1);
+    // margin-left: calc(var(--bs-gutter-x) * -1);
+  }
+  .row {
+    @include up-xl {
+      --bs-gutter-x: 2rem;
+      // margin-right: calc(var(--bs-gutter-x) * -0.5);
+      // margin-left: calc(var(--bs-gutter-x) * -0.5);
+    }
+  }
+}

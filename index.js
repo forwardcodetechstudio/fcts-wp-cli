@@ -41,8 +41,12 @@ function fetchVariables() {
         return printError(
             "please enter project name, run: fcts-wp new [project-name]"
         );
-    projectName = replaceAll(projectName, "-", "_");
-    dir = `${projectName}-wp`;
+    projectName = String(replaceAll(projectName, "-", "_"));
+    if(!projectName.includes('-wp')){
+        dir = `${projectName}-wp`;
+    }else{
+        dir = `${projectName}`;
+    }
 
     themeDir = currentDirectory + `/${dir}/wp-content/themes/${projectName}`;
 
@@ -167,7 +171,7 @@ function replaceThemeNameVariables() {
 
     for (const file of themeFiles) {
         if (file.includes('theme-name')) {
-            var newFileName = file.replace('theme-name-', `${projectName}-`)
+            var newFileName = file.replace('theme-name', `${projectName}`)
             // fs.createFile(`${themeIncDir}/${newFileName}`);
             var fileContent = fs.readFileSync(`${themeIncDir}/${file}`);
             fileContent = fileContent.toString();

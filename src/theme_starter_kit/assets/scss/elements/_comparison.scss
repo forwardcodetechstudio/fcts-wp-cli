@@ -1,0 +1,61 @@
+.comparison {
+  &__item {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 0;
+    height: 100%;
+    ul {
+      li {
+        font-size: var(--fs-18);
+        padding-left: 30px;
+        padding-bottom: 10px;
+        &::before {
+          background-image: url(../img/icons/cross_icon.svg);
+          background-repeat: no-repeat;
+          background-color: unset;
+          background-size: contain;
+          width: 24px;
+          height: 24px;
+          top: 0;
+          left: 0;
+          border-radius: 0;
+        }
+      }
+    }
+    &._pros {
+      border: 5px solid $color-dark-blue;
+      ul {
+        li {
+          &::before {
+            background-image: url(../img/icons/check_icon.svg);
+          }
+        }
+      }
+    }
+  }
+  // &__cons {
+  //   padding: 30px;
+  //   background-color: #fff;
+  //   border-radius: 0;
+  //   box-shadow: 3px 3px 56px 0px $color-dark-blue ;
+  //   ul {
+  //     li {
+  //       font-size: var(--fs-18);
+  //       padding-left: 30px;
+  //       border-bottom: 1px solid $color-dark-blue ;
+  //       padding-bottom: 10px;
+  //       &::before {
+  //         background-image: url(../img/icons/cross_icon.svg);
+  //         background-repeat: no-repeat;
+  //         background-color: unset;
+  //         background-size: contain;
+  //         width: 24px;
+  //         height: 24px;
+  //         top: calc(50% - 19px);
+  //         left: 0;
+  //         border-radius: 0;
+  //       }
+  //     }
+  //   }
+  // }
+}

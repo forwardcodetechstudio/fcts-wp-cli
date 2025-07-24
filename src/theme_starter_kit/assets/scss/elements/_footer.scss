@@ -1,0 +1,116 @@
+.footer {
+  background-color: $footer_background_color;
+  color: $footer_text_color;
+  &__text {
+    h4 {
+      margin-bottom: 10px !important;
+    }
+    p {
+      font-size: var(--fs-16);
+    }
+  }
+  &__content {
+    p {
+      font-size: var(--fs-16);
+    }
+  }
+
+  &__logo {
+    margin-bottom: $footer_logo_margin_bottom;
+    img {
+      max-width: $footer_logo_width;
+    }
+  }
+
+  &__contacts {
+    & > *:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 12px 10px;
+    margin-top: 10px;
+    img {
+      max-width: 24px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__menu {
+    ul {
+      li {
+        padding-left: 0;
+        font-size: var(--fs-16);
+        font-family: var(--font-main);
+        margin-bottom: 0 !important;
+        line-height: 1.5;
+        a {
+          position: relative;
+          &:hover {
+            color: $color-yellow;
+          }
+        }
+
+        &::before {
+          content: unset;
+        }
+        & + li {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+
+  &__sub {
+    padding-top: 10px;
+    margin-top: 30px;
+    row-gap: 10px;
+    @include up-lg {
+      padding-top: 30px;
+      margin-top: 50px;
+    }
+  }
+
+  &__legal {
+    ul {
+      display: flex;
+      row-gap: 16px;
+      flex-flow: column nowrap;
+      justify-content: center;
+      text-wrap: nowrap;
+      @include down-lg {
+        row-gap: 5px;
+      }
+      li {
+        font-size: var(--fs-14);
+        padding-left: 0;
+        margin-bottom: 0 !important;
+        &::before {
+          content: unset;
+        }
+        a {
+          position: relative;
+          &:hover {
+            color: $color-yellow;
+          }
+        }
+      }
+      @include up-lg {
+        flex-flow: row nowrap;
+        column-gap: 24px;
+        justify-content: flex-end;
+      }
+    }
+  }
+  &__copyright {
+    p {
+      font-size: var(--fs-14);
+    }
+  }
+}

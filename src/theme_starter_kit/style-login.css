@@ -13,6 +13,10 @@
 	border-top-left-radius: 0;
 	border-bottom-right-radius: 0;
 	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 body.login {
@@ -33,15 +37,6 @@ body.login div#login form#loginform {
 body.login div#login {}
 
 body.login div#login h1 {}
-
-body.login div#login h1 a {
-	height: 65px;
-	width: 320px;
-	background-image: var(--c-login-screen-logo);
-	background-size: 320px 65px;
-	background-repeat: no-repeat;
-	margin-top: 30px;
-}
 
 body.login div#login form#loginform p.forgetmenot {
 	margin-top: 7px;
@@ -80,6 +75,7 @@ body.login div#login p#nav a {
 body.login div#login p#backtoblog a {
 	color: var(--c-primary);
 	font-size: 14px;
+	text-align: center;
 }
 
 .privacy-policy-link {
@@ -129,12 +125,11 @@ body.login div#login form#loginform p.submit {}
 body.login div#login form#loginform p.submit input#wp-submit {}
 
 body.login div#login p#nav {
-	display: inline-block;
+	display: block;
 	margin: 0;
 }
 
 body.login div#login p#backtoblog {
-	display: inline-block;
-	float: right;
-	margin: 0;
+	display: block;
+	text-align: center;
 }

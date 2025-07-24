@@ -1,0 +1,34 @@
+.job {
+  &__item {
+    border: 1px solid $color-black;
+    border-radius: 0;
+    padding: 20px;
+    height: 100%;
+    .job__head {
+    }
+    .job__body {
+      ._icon-text {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        margin: 20px 0;
+        @include down-md {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+        ._item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}

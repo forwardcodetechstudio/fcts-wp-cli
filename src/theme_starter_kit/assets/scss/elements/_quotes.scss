@@ -1,0 +1,12 @@
+.quotes {
+  background: transparent;
+  background-image: var(--bg-quotes);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  h2 {
+    font-size: var(--fs-56);
+  }
+}

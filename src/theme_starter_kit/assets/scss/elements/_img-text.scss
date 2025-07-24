@@ -1,0 +1,11 @@
+.img-text {
+  &__content {
+    .img-text__deco {
+      width: 50px;
+      margin-bottom: 20px;
+    }
+  }
+  img {
+    border-radius: 0;
+  }
+}

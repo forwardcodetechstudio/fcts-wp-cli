@@ -1,0 +1,122 @@
+.contact-us {
+  .col-xl-3 {
+    img {
+      max-width: 48px;
+      margin-bottom: 20px;
+
+      @include up-lg {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  ul {
+    li {
+      color: $color-black;
+      padding-left: 30px;
+      font-size: var(--fs-18);
+      margin-bottom: 20px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../img/icons/tick.svg);
+        background-repeat: no-repeat;
+        background-color: unset;
+        background-position: center;
+        object-fit: contain;
+        width: 26px;
+        height: 26px;
+        left: 0;
+        top: -3px;
+      }
+    }
+  }
+
+  ._info {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    border-radius: 0;
+    img {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 0;
+      border: 2px solid $color-dark-blue;
+    }
+    .text {
+      h6 {
+        margin-bottom: 0;
+        font-weight: 600;
+        font-size: var(--fs-16);
+        color: var(--primary-color);
+      }
+      p {
+        font-size: var(--fs-14);
+      }
+    }
+  }
+  .item {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include down-lg {
+      flex-direction: row;
+      align-items: center;
+    }
+    a {
+      line-height: 1.5;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      border-left: 2px dashed $color-dark-blue;
+      width: 2px;
+      height: 100%;
+      margin-left: -25px;
+      @include down-lg {
+        content: unset;
+      }
+    }
+    &:first-child {
+      &::after {
+        content: unset;
+      }
+    }
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__box {
+    img {
+      display: block;
+      max-width: 32px;
+      margin-bottom: 12px;
+
+      @include up-lg {
+        margin-bottom: 16px;
+      }
+    }
+
+    h6 {
+      margin-bottom: 8px !important;
+    }
+
+    p {
+      margin-bottom: 8px !important;
+    }
+
+    a:not(.link) {
+      display: inline-block;
+      text-decoration: underline;
+    }
+  }
+}

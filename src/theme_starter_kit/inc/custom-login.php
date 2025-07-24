@@ -6,26 +6,56 @@
  * @package Theme_Name
  */
 
+use function PHPSTORM_META\type;
+
 /**
  * Adds custom styles and logo to the login screen.
  */
 function theme_name_login_logo() {
     // Set CSS variables for secondary and primary colors
-    $secondary_color = get_field('login_screen_secondary_color', 'option');
-    $primary_color = get_field('login_screen_primary_color', 'option');
-    $logo = get_field('login_screen_logo', 'option')['url'] ?? null;
+    $login= get_field('login','option');
+    if(isset($login['primary_color'])){
+      $primary_color = $login['primary_color']? globalOptions()->bgColorFormat($login['primary_color'],type:'single'):$login['primary_color_custom'];
+    }else{
+      $primary_color = $login['primary_color_custom']??'#000000';
+    }
+    if(isset($login['secondary_color'])){
+      $secondary_color = $login['secondary_color']? globalOptions()->bgColorFormat($login['secondary_color'],type:'single'):$login['secondary_color_custom'];
+    }else{
+      $secondary_color =$login['secondary_color_custom']??'#FFFFFF';
+    }
+    $logo = $login['logo']??[];
+    
+    if($logo){
+      $logo_image=$logo['logo']['url']??null;
+      $height= isset($logo['height']) && $logo['height']?$logo['height'].'px':'100px';
+      $width= isset($logo['width'])&& $logo['width']?$logo['width'].'px':'200px';
+      $margin_top= isset($logo['margin_top'])&& $logo['margin_top']?$logo['margin_top'].'px':'30px';
+      $logo_styles=<<<style
+      body.login div#login h1 a {
+      height: var($height);
+      width: var($width);
+      background-image: var($logo_image);
+      background-size: var($width) var($height);
+      background-repeat: no-repeat;
+      margin-top: var($margin_top);
+      }
+      style;
+    }else{
+      $logo_styles="body.login div#login h1 a {\nmargin-top: 20px;margin-bottom:0px;\n}";
+    }
 
     $html = null;
-    if ($secondary_color && $primary_color && $logo) {
-        $html .= '<style type="text/css">';
-        $html .= ':root {';
-        $html .= "--c-secondary: {$secondary_color};";
-        $html .= "--c-primary: {$primary_color};";
-        $html .= "--c-login-screen-logo: url({$logo});";
-        $html .= '}';
-        $html .= '</style>';
-        echo $html;
-    }
+    $html =<<<style
+    <style type='text/css'>
+      :root {
+        --c-secondary: {$secondary_color};
+        --c-primary: {$primary_color};
+        }
+      $logo_styles
+    </style>
+    style;
+    echo $html;
 }
 add_action( 'login_enqueue_scripts', 'theme_name_login_logo' );
 

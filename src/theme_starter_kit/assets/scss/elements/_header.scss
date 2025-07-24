@@ -1,0 +1,447 @@
+._js-overflow-hidden {
+  .header {
+    transition: all 0.3s ease-in-out;
+
+    &__logo {
+      .light-logo {
+        display: block;
+      }
+    }
+    // &._js-sticky {
+    //   .menu-trigger {
+    //     span {
+    //       background-color: $color-black;
+    //     }
+    //   }
+    // }
+  }
+}
+
+.header {
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 12px 0;
+  background-color: $header_background_color;
+  transition: $ease300;
+
+  & + section {
+    margin-top: var(--header--height);
+  }
+  &._has-bg {
+    background: $color-dark-blue;
+  }
+
+  // & + section:not(.hero) {
+  //   margin-top: var(--header--height);
+  // }
+
+  &._js-sticky {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+
+    &._js-menu-open {
+      .header__logo {
+        .light-logo {
+          display: block;
+        }
+      }
+    }
+    .header__logo {
+      .light-logo {
+        display: block;
+      }
+      .dark-logo {
+        display: none;
+      }
+      img {
+        max-width: $logo_width_scrolled_desktop;
+        @include down-xl {
+          max-width: $logo_width_scrolled_tablet;
+        }
+        @include down-md {
+          max-width: $logo_width_scrolled_mobile;
+        }
+      }
+    }
+
+    .navbar {
+      @include down-xl {
+        top: var(--header--height-sticky);
+        height: calc(100% - var(--header--height-sticky));
+      }
+      .menu {
+        li {
+          @include up-xl {
+            color: $color-black;
+          }
+        }
+        .dropdown-menu {
+          @include up-xl {
+            margin-top: 38px;
+          }
+        }
+      }
+    }
+  }
+
+  &__logo {
+    img {
+      display: block;
+      max-width: $logo_width_desktop;
+      height: auto;
+      transition: $ease300;
+      @include down-xl {
+        max-width: $logo_width_tablet;
+      }
+      @include down-md {
+        max-width: $logo_width_mobile;
+      }
+    }
+  }
+
+  .navbar {
+    padding: 0;
+    column-gap: 25px;
+    width: 100%;
+
+    @include up-xl {
+      flex-wrap: nowrap;
+      justify-content: $header_bar_main_menu_alignment;
+    }
+
+    @media (min-width: 576px) and (max-width: 1199.98px) {
+      padding-left: calc((100vw - var(--container)) / 2);
+      padding-right: calc((100vw - var(--container)) / 2);
+    }
+
+    @include down-xl {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-content: flex-start;
+      right: 0;
+      top: var(--header--height);
+      width: 100%;
+      height: calc(100% - var(--header--height));
+      transform: translateX(100%);
+      row-gap: 16px;
+      background: $color-white;
+      padding-bottom: 60px;
+      z-index: 20;
+      transition: all 0.2s;
+      overflow-y: auto;
+    }
+
+    &._js-open {
+      @include down-xl {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 16px;
+    justify-content: center;
+
+    .btn_light-purple {
+      &:hover {
+        border: 1px solid $color-dark-blue;
+      }
+    }
+    @include down-xl {
+      width: 100%;
+      padding: 10px 12px;
+      flex-flow: row wrap;
+    }
+
+    @include up-xl {
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      text-wrap: nowrap;
+      font-size: var(--fs-16);
+
+      @include down-xl {
+        width: 100%;
+      }
+    }
+  }
+
+  .menu-trigger {
+    display: none;
+    position: relative;
+    min-width: 27px;
+    width: 27px;
+    height: 18px;
+    background: none;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    z-index: 40;
+    margin-left: 20px;
+
+    @include down-xl {
+      display: inline-block;
+    }
+
+    span {
+      display: inline-block;
+      transition: $ease300;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $menu-trigger-color;
+      border-radius: 0;
+
+      &:nth-of-type(1) {
+        top: 0;
+      }
+
+      &:nth-of-type(2) {
+        top: 8px;
+      }
+
+      &:nth-of-type(3) {
+        bottom: 0;
+      }
+    }
+
+    &._js-active {
+      span {
+        background-color: $menu-trigger-color-active;
+        &:nth-of-type(1) {
+          transform: translateY(8px) rotate(-45deg);
+        }
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+        &:nth-of-type(3) {
+          transform: translateY(-8px) rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  column-gap: $header_bar_main_menu_items_gap; //px value is missing
+  justify-content: center;
+
+  @include up-xl {
+    justify-content: flex-end;
+  }
+
+  @include down-xl {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0;
+    padding: 12px;
+  }
+
+  li {
+    font-size: var(--fs-18);
+    line-height: 1.5;
+    color: $color-black;
+    cursor: pointer;
+    font-weight: 600;
+    &:hover {
+      color: $color-dark-blue;
+    }
+
+    @include down-xl {
+      display: block;
+      width: 100%;
+    }
+
+    @include up-xl {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    &.active {
+      a {
+        color: $color-dark-blue;
+        @include up-xl {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    // &:hover {
+    //   @include up-xl {
+
+    //   }
+    // }
+
+    a,
+    span {
+      display: block;
+
+      @include down-xl {
+        padding: 10px 0;
+      }
+    }
+
+    a {
+      white-space: nowrap;
+      position: relative;
+      &::after {
+        content: "";
+        height: 2px;
+        width: 0;
+        background-color: $color-white;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  li.dropdown {
+    position: relative;
+    padding-right: 28px;
+    &:hover {
+      &::after {
+        background: url("../img/icons/dropdown-dark.svg") no-repeat;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 15px;
+      width: 18px;
+      height: 11px;
+      background: url("../img/icons/dropdown-dark.svg") no-repeat;
+      background-size: contain;
+
+      @include up-xl {
+        top: 50%;
+        margin-top: -5px;
+      }
+    }
+    @include up-xl {
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 60px;
+        background-color: transparent;
+        bottom: -25px;
+        left: 0;
+        z-index: 0;
+      }
+    }
+
+    & > a {
+      display: inline-block;
+    }
+
+    &:hover .dropdown-menu {
+      @include up-xl {
+        display: block;
+      }
+    }
+
+    &._js-open {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    border: none;
+    border-radius: 0;
+    left: -20px;
+    top: 40px;
+    text-align: left;
+    z-index: 20;
+    padding: 0;
+
+    @include down-xl {
+      position: unset;
+      box-shadow: none;
+      width: 100%;
+      background-color: $color-white;
+    }
+
+    @include up-xl {
+      margin-top: 39px;
+      padding: 24px;
+      max-width: 388px;
+      background-color: $sub-menu-bg;
+      // color: $color-white;
+    }
+
+    li {
+      color: $sub-menu-item;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      position: unset;
+      border-bottom: none;
+      &:hover {
+        color: $color-dark-blue;
+      }
+
+      &:after {
+        content: none;
+        display: none;
+      }
+
+      a {
+        display: block;
+        @include up-xl {
+          &::after {
+            width: 0;
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+
+        @include down-xl {
+          text-align: left;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          color: $color-black;
+        }
+      }
+
+      & + li {
+        margin-top: 8px;
+
+        @include up-xl {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}

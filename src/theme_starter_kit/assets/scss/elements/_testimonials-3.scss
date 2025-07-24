@@ -1,0 +1,131 @@
+.testimonials {
+  .item {
+    height: 100%;
+  }
+  &__box {
+    display: flex;
+    height: 100%;
+    @include down-lg {
+      flex-direction: column-reverse;
+      padding: 20px;
+    }
+
+    &__head {
+      position: relative;
+      background-color: $color-black;
+      padding: 60px;
+      border-radius: 0 0 50px 50px;
+      @include down-lg {
+        flex: 1;
+        padding: 30px;
+      }
+      @include up-lg {
+        width: calc(var(--container) / 12 * 7);
+        border-radius: 50px 0 0 50px;
+      }
+      h6 {
+        margin-bottom: 0;
+        font-weight: 600;
+        position: relative;
+        color: $color-black;
+        padding-left: 20px;
+        margin-top: 30px;
+        &::before {
+          position: absolute;
+          content: "";
+          background-color: $color-black;
+          width: 15px;
+          height: 3px;
+          top: 50%;
+          left: 0;
+        }
+      }
+      p {
+        margin-bottom: 10px;
+        font-size: var(--fs-32);
+        font-weight: 500;
+      }
+    }
+    &__body {
+      @include up-lg {
+        width: calc(var(--container) / 12 * 5);
+      }
+      max-width: 100%;
+      img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0 50px 50px 0;
+        @include down-lg {
+          border-radius: 50px 50px 0 0;
+          height: 500px;
+        }
+      }
+    }
+  }
+
+  &-slider {
+    .slick-slide {
+      margin: 0 12px;
+      height: inherit !important;
+    }
+
+    .slick-list {
+      margin: 0 -12px;
+    }
+    .slick-track {
+      display: flex !important;
+    }
+    .slick-dots {
+      @include up-lg {
+        left: 60px;
+        bottom: 10px;
+        justify-content: start;
+        position: absolute;
+      }
+    }
+  }
+}
+$ratingSize: 125px;
+
+.star-rating {
+  height: ($ratingSize/5);
+  position: relative;
+  width: $ratingSize;
+  margin-bottom: 10px;
+  &:before {
+    // inactive
+    background-image: url(../img/icons/star-inactive.svg);
+    background-repeat: repeat-x;
+    background-size: ($ratingSize/5);
+    bottom: 0;
+    content: "";
+    display: block;
+    height: ($ratingSize/5);
+    position: absolute;
+    top: 0;
+    width: $ratingSize;
+  }
+  > span {
+    display: block;
+    text-indent: -10000px;
+    width: $ratingSize;
+    height: ($ratingSize/5);
+    position: absolute;
+    overflow: hidden;
+    &:before {
+      // active
+      background-image: url(../img/icons/star-active.svg);
+      background-repeat: repeat-x;
+      background-size: ($ratingSize/5);
+      bottom: 0;
+      content: "";
+      display: block;
+      height: ($ratingSize/5);
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-indent: 10000px;
+      top: 0;
+    }
+  }
+}

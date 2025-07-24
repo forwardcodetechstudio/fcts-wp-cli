@@ -2,8 +2,16 @@
  * global wp, jQuery
  */
 (function ($) {
-    // Your code goes here
-    $(function () {
-        console.log("wp jQuery");
-    });
+  // $.ajax({
+  //   type: "POST",
+  //   url: php.ajax,
+  //   data: {
+  //     action:"demo",
+  //     value:'Value',
+  //     key:"Key"
+  //   },
+  //   success: function (response) {
+      
+  //   }
+  // });
 })(jQuery);

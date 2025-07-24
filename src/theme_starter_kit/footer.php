@@ -9,6 +9,7 @@
  * @package Theme_Name
  */
 
+get_template_part('template-parts/footer/site-footer');
 ?>
 
 

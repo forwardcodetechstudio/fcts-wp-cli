@@ -1,0 +1,27 @@
+.stats {
+  &__item {
+    padding-left: 32px;
+    background: $color-white;
+    padding: 20px;
+    border-radius: 0;
+
+    h5 {
+      color: $color-dark-blue;
+    }
+    h6 {
+      margin-bottom: 8px !important;
+    }
+  }
+
+  &-sample {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: var(--fs-80);
+    color: $color-dark-blue;
+    font-family: var(--font-main);
+    line-height: 1.3;
+    font-weight: 800;
+    margin-bottom: 8px;
+    justify-content: center;
+  }
+}
