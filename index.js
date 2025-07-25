@@ -4,7 +4,7 @@ const fs = require('fs-extra');
 const wget = require('node-wget');
 const extract = require('extract-zip');
 const os = require('os');
-
+const path =require('path');
 
 
 
@@ -222,6 +222,7 @@ function replaceThemeNameVariables() {
         }
     }
 
+    processFilesRecursively(themeDir).catch((err)=>console.log(err));
 
 }
 
@@ -235,7 +236,28 @@ function replaceAll(str, find, replace) {
 
 
 
+async function processFilesRecursively(dir) {
+  const items = await fs.readdir(dir, { withFileTypes: true });
 
+  for (const item of items) {
+    const fullPath = path.join(dir, item.name);
+
+    if (item.isDirectory()) {
+      // 🔁 Recursive call for nested folders
+      await processFilesRecursively(fullPath);
+    } else if (item.isFile()) {
+      // 📄 Process file content
+      var fileContent = fs.readFileSync(fullPath);
+      fileContent = fileContent.toString();
+      fileContent = replaceAll(fileContent, 'THEME_NAME', projectName.toUpperCase())
+      fileContent = replaceAll(fileContent, 'Theme_Name', projectName)
+      fileContent = replaceAll(fileContent, 'theme_name', projectName.toLowerCase())
+      fileContent = replaceAll(fileContent, 'theme-name', projectName.toLowerCase())
+
+      fs.writeFileSync(fullPath, fileContent);
+    }
+  }
+}
 
 
 
